@@ -1,0 +1,115 @@
+package com.sample
+ 
+import com.sample.DroolsTest.Pozycja;
+import com.sample.DroolsTest.Ego;
+import com.sample.DroolsTest.Agresja;
+import com.sample.DroolsTest.Zel;
+import com.sample.DroolsTest.Nurkowanie;
+import com.sample.DroolsTest.Szybkosc; 
+
+//Pytania 
+
+rule "Pozycja"
+	when
+	then
+		System.out.println("Jako dziecko chcia³em byæ ...\n");
+		int input = 3;
+		insert(new Pozycja(input));
+end
+
+rule "Ego"
+	when
+		exists Pozycja(value == 2 || value == 3)
+	then
+		System.out.println("Czy jesteœ samolubny?");
+		int input = 1;
+		insert(new Ego(input));
+ end
+ 
+rule "Agresja"
+	when
+ 		exists Pozycja(value == 1)
+	then
+		System.out.println("Czy jesteœ agresywny?");
+ 		int input = 2;
+ 		insert(new Agresja(input));
+end
+ 
+rule "Zel"
+ 	when
+ 		exists Pozycja()
+ 	then
+ 		System.out.println("Butelka ¿elu starcza Ci na...");
+ 		int input = 2;
+ 		insert(new Zel(input));
+end
+ 
+rule "Nurkowanie"
+ 	when
+ 		exists Pozycja(value == 2 || value == 3)
+ 	then
+ 		System.out.println("Czy lubisz nurkowaæ?");
+ 		int input = 2;
+ 		insert(new Nurkowanie(input));	
+end
+ 
+rule "Szybkosc"
+	when
+		exists Pozycja()
+	then
+		System.out.println("Jak szybki jesteœ?");
+		int input = 2;
+		insert(new Szybkosc(input));
+end
+
+rule "Wypady"
+	when
+	
+	then
+end
+ 
+//Baza wiedzy
+ 
+rule "Zlatan"
+ 	when
+ 		exists Pozycja(value == 2)
+ 		exists Ego(value == 2)
+ 	then
+ 		System.out.println("Jesteœ Zlatanem Ibrahimowiciem!");
+end
+
+rule "Pepe"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value == 2)
+	then
+		System.out.println("Jesteœ Pepe!");
+end
+
+rule "Ronaldo"
+	when
+		exists Pozycja(value == 3)
+		exists Zel(value == 2)
+	then
+		System.out.println("Jesteœ Cristiano Ronaldo!");
+end
+
+rule "Robben"
+	when
+		exists Pozycja(value == 2)
+		exists Ego(value == 1)
+		exists Zel(value == 0)
+		exists Nurkowanie(value == 2)
+	then
+		System.out.println("Jesteœ Arienem Robbenem!");
+end
+
+rule "Neymar"
+	when
+		exists Pozycja(value == 3)
+		exists Ego(value == 1)
+		exists Zel(value == 1)
+		exists Nurkowanie(value == 2)
+	then
+		System.out.println("Jesteœ Neymarem!");
+end
