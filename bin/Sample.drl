@@ -5,7 +5,16 @@ import com.sample.DroolsTest.Ego;
 import com.sample.DroolsTest.Agresja;
 import com.sample.DroolsTest.Zel;
 import com.sample.DroolsTest.Nurkowanie;
-import com.sample.DroolsTest.Szybkosc; 
+import com.sample.DroolsTest.Szybkosc;
+import com.sample.DroolsTest.Podrywanie;
+import com.sample.DroolsTest.Wypady;
+import com.sample.DroolsTest.Szczescie;
+import com.sample.DroolsTest.Wzrost; 
+import com.sample.DroolsTest.Wiek;
+import com.sample.DroolsTest.Banany;
+import com.sample.DroolsTest.Taktyka;
+import com.sample.DroolsTest.Imprezy;
+import com.sample.DroolsTest.Lider;
 
 //Pytania 
 
@@ -13,8 +22,72 @@ rule "Pozycja"
 	when
 	then
 		System.out.println("Jako dziecko chcia³em byæ ...\n");
-		int input = 3;
+		int input = 0;
 		insert(new Pozycja(input));
+end
+
+rule "Wypady"
+	when
+		exists Pozycja(value == 0)
+	then
+		System.out.println("Czy lubisz dalekie wypady?");
+		boolean input = true;
+		insert(new Wypady(input));
+end
+
+rule "Szczescie"
+	when
+		exists Wypady(value == false)
+	then
+		System.out.println("Które zdanie najlepiej okreœla poziom Twojego szczêœcia w ¿yciu?");
+		int input = 2;
+		insert(new Szczescie(input));
+end
+
+rule "Wiek"
+	when
+		exists Szczescie(value == 1)
+	then
+		System.out.println("Podaj swój wiek");
+		int input = 28;
+		insert(new Wiek(input));
+end
+
+rule "Agresja"
+	when
+ 		exists Pozycja(value == 1)
+ 		exists Wzrost(value > 174)
+	then
+		System.out.println("Czy jesteœ agresywny?");
+ 		int input = 2;
+ 		insert(new Agresja(input));
+end
+
+rule "Taktyka"
+	when
+		exists Agresja(value != 2)
+	then
+		System.out.println("Jaki jest Twój schemat dzia³ania?");
+		int input = 2;
+		insert(new Taktyka(input));
+end
+
+rule "Lider"
+	when
+		exists Taktyka(value == 1)
+	then
+		System.out.println("Czy masz zdolnoœci przywódcze?");
+		boolean input = true;
+		insert(new Lider(input));
+end
+
+rule "Banany"
+	when
+		exists Lider(value == false)
+	then
+		System.out.println("Czy lubisz banany?");
+		boolean input = true;
+		insert(new Banany(input));
 end
 
 rule "Ego"
@@ -24,16 +97,17 @@ rule "Ego"
 		System.out.println("Czy jesteœ samolubny?");
 		int input = 1;
 		insert(new Ego(input));
- end
- 
-rule "Agresja"
-	when
- 		exists Pozycja(value == 1)
-	then
-		System.out.println("Czy jesteœ agresywny?");
- 		int input = 2;
- 		insert(new Agresja(input));
 end
+
+rule "Podrywanie"
+	when
+		exists Pozycja(value == 1)
+	then
+		System.out.println("Czy podrywasz dziewczyny swoich kolegów?");
+		boolean input = true;
+		insert(new Podrywanie(input));
+end
+
  
 rule "Zel"
  	when
@@ -62,20 +136,92 @@ rule "Szybkosc"
 		insert(new Szybkosc(input));
 end
 
-rule "Wypady"
+rule "Wzrost"
 	when
-	
+		exists Pozycja(value != 0)
 	then
+		System.out.println("Jakiego jesteœ wzrostu (odpowiedŸ podaj w cm)?");
+		int input = 2;
+		insert(new Wzrost(input));
 end
- 
+
+rule "Imprezy"
+	when
+		exists Pozycja(value == 3)
+		exists Ego(value == 1)
+	then
+		System.out.println("Czy lubisz wybuchowe imprezy?");
+		boolean input = true;
+		insert(new Imprezy(input));
+end
 //Baza wiedzy
- 
-rule "Zlatan"
- 	when
- 		exists Pozycja(value == 2)
- 		exists Ego(value == 2)
- 	then
- 		System.out.println("Jesteœ Zlatanem Ibrahimowiciem!");
+
+//GK
+
+rule "Neuer"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == true)
+	then
+		System.out.println("Jesteœ Manuelem Neuerem!");
+end
+
+rule "Kuszczak"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 0)
+	then
+		System.out.println("Jesteœ Tomaszem Kuszczakiem!");
+end
+
+rule "Szczesny"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 2)
+	then
+		System.out.println("Jesteœ Wojciechem Szczêsnym!");
+end
+
+rule "Courtois"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 1)
+		exists Wiek(value <= 22)
+	then
+		System.out.println("Jesteœ Thibaut Courtois!");
+end
+
+rule "Lloris"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 1)
+		exists Wiek(value <= 28)
+	then
+		System.out.println("Jesteœ Hugo Lloris!");
+end
+
+rule "Casillas"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 1)
+		exists Wiek(value > 28)
+	then
+		System.out.println("Jesteœ Ikerem Casillasem!");
+end
+
+//DEF 
+
+rule "Mascherano"
+	when
+		exists Pozycja(value == 1)
+		exists Wzrost(value <= 174)
+	then
+		System.out.println("Jesteœ Javier Mascherano!");
 end
 
 rule "Pepe"
@@ -84,6 +230,66 @@ rule "Pepe"
 		exists Agresja(value == 2)
 	then
 		System.out.println("Jesteœ Pepe!");
+end
+
+rule "Cionek"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 0)
+	then
+		System.out.println("Jesteœ Thiago Cionkiem!");
+end
+
+rule "Thiago Silva"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 2)
+	then
+		System.out.println("Jesteœ Thiago Silva!");
+end
+
+rule "Sergio Ramos"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 1)
+		exists Lider(value == true)
+	then
+		System.out.println("Jesteœ Sergio Ramosem!");
+end
+
+rule "Alves"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 1)
+		exists Lider(value == false)
+		exists Banany(value == true)
+	then
+		System.out.println("Jesteœ Danim Alvesem!");
+end
+
+rule "Luiz"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 1)
+		exists Lider(value == false)
+		exists Banany(value == false)
+	then
+		System.out.println("Jesteœ Davidem Luizem!");
+end
+
+//MID
+ 
+rule "Zlatan"
+ 	when
+ 		exists Pozycja(value == 2)
+ 		exists Ego(value == 2)
+ 	then
+ 		System.out.println("Jesteœ Zlatanem Ibrahimowiciem!");
 end
 
 rule "Ronaldo"
@@ -112,4 +318,19 @@ rule "Neymar"
 		exists Nurkowanie(value == 2)
 	then
 		System.out.println("Jesteœ Neymarem!");
+end
+
+rule "Terry"
+	when
+		exists Pozycja(value == 1)
+		exists Podrywanie(value == true)
+	then
+		System.out.println("Jesteœ Johnem Terrym!");
+end
+
+rule "Balotelli"
+	when
+		exists Imprezy(value == true)
+	then
+		System.out.println("Jesteœ Mario Balotellim!");
 end
