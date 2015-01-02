@@ -1,4 +1,5 @@
-bin/
+bin/com/
 *~
 \#*
 *.class
+prj.el
