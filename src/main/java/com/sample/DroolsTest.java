@@ -62,14 +62,6 @@ public class DroolsTest {
     	
     }
     
-    public static class Podrywanie {
-    	public boolean value;
-    	
-    	public Podrywanie(boolean v) {
-    		value = v;
-    	}
-    }
-    
     public static class Agresja {
     	public int value;
     	
@@ -87,17 +79,9 @@ public class DroolsTest {
     }
     
     public static class Nurkowanie {
-    	public int value;
+    	public boolean value;
     	
-    	public Nurkowanie(int v) {
-    		value = v;
-    	}
-    }
-    
-    public static class Szybkosc {
-    	public int value;
-    	
-    	public Szybkosc(int v) {
+    	public Nurkowanie(boolean v) {
     		value = v;
     	}
     }
@@ -162,6 +146,62 @@ public class DroolsTest {
     	public boolean value;
     	
     	public Lider(boolean v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Podejscie {
+    	public int value;
+    	
+    	public Podejscie(int v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Ogrodnik {
+    	public boolean value;
+    	
+    	public Ogrodnik(boolean v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Broda {
+    	public boolean value;
+    	
+    	public Broda(boolean v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Zaimponowanie {
+    	public boolean value;
+    	
+    	public Zaimponowanie(boolean v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Samolubnosc {
+    	public int value;
+    	
+    	public Samolubnosc(int v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Chipsy {
+    	public boolean value;
+    	
+    	public Chipsy(boolean v) {
+    		value = v;
+    	}
+    }
+    
+    public static class Gryzienie {
+    	public boolean value;
+    	
+    	public Gryzienie(boolean v) {
     		value = v;
     	}
     }
