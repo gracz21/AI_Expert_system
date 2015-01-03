@@ -1,0 +1,81 @@
+1. Jako dziecko zawsze chcia³em byæ ...
+a) bramkarzem. (0)
+b) obroñc¹. (1)
+c) pomocnikiem. (2)
+d) napastnikiem. (3)
+
+2. Czy lubisz dalekie wypady?
+a) Nie (false)
+b) Tak (true)
+
+3. Które zdanie najlepiej okreœla poziom Twojego szczêœcia w ¿yciu?
+a) Gola potrafi mi strzeliæ nawet bramkarz przeciwnika ze swojego pola karnego. (0)
+b) Z wiêkszoœci sytuacji podbramkowych wychodzê zwyciêsko. (1)
+c) Szczêœcie mam wpisane w nazwisko. (2)
+
+4. Podaj swój wiek
+//Pole tekstowe do podania wieku
+
+5. Jakiego jesteœ wzrostu (odpowiedŸ podaj w cm)?
+//Pole tekstowe do podania wzrostu
+
+6. Czy jesteœ agresywny?
+a) Nie, jestem raczej spokojny. (0)
+b) Czasami bywam agresywny. (1)
+c) Czekaj, muszê kogoœ zabiæ. Zaraz wracam ... (2)
+
+7. Jaki jest Twój schemat dzia³ania?
+a) Nie dzia³am i nie myœlê. (0)
+b) Najpierw dzia³am, a potem myœlê nad konsekwencjami. (1)
+c) Najpierw myœlê, a potem dzia³am wed³ug opracowanego planu. (2)
+
+8. Czy masz zdolnoœci przywódcze?
+a) Nie (false)
+b) Tak (true)
+
+9. Czy lubisz banany?
+a) Nie (false)
+b) Tak (true)
+
+10. Które zdanie najlepiej podsumowuje Twoje podejœcie do ¿ycia?
+a) Preferujê powolne rozegranie. (0)
+b) Lubiê frontalny atak. (1)
+
+11. Czy lubisz prace ogrodowe?
+a) Nie (false)
+b) Tak (true)
+
+12. Czy masz brodê?
+a) Nie (false)
+b) Tak (true)
+
+13. Czy ³atwo Ci zaimponowaæ?
+a) Nie (false)
+b) Tak (true)
+
+14. Czy jesteœ samolubny?
+a) Nie, czêsto lubiê asystowaæ i pomagaæ innym ludziom. (0)
+b) Nie nale¿ê do najbardziej samolubnych, ale czasami lubiê zabraæ siê samemu z pi³k¹. (1)
+c) ??? (2)
+
+15. Czy lubisz chipsy Lay'sy?
+a) Nie (false)
+b) Tak (true)
+
+16. Czy lubisz wybuchowe imprezy?
+a) Nie (false)
+b) Tak (true)
+
+17. EGO
+a) ??? (0)
+b) ??? (1)
+c) Móg³byœ nie zwracaæ siê do mnie per Ty? (2)
+
+18. Butelka ¿elu starcza Ci na...
+a) Nie uzywam ¿elu lub starcza mi na ok. pó³ roku. (0)
+b) miesi¹c. (1)
+c) tydzieñ. (2)
+
+19. Czy lubisz cos przegryŸæ od czasu do czasu?
+a) Nie (false)
+b) ??? (true)
