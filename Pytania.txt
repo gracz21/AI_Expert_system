@@ -66,8 +66,8 @@ b) Tak (true)
 a) Nie (false)
 b) Tak (true)
 
-17. EGO
-a) ??? (0)
+17. Czy jesteœ zarozumia³y?
+a) Nie (0)
 b) ??? (1)
 c) Móg³byœ nie zwracaæ siê do mnie per Ty? (2)
 
