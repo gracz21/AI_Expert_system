@@ -1,0 +1,133 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Pozycja [0]</activationId>
+      <rule>Pozycja</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Pozycja [0]</activationId>
+      <rule>Pozycja</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>com.sample.DroolsTest$Pozycja@535e5cf8</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Pozycja [0]</activationId>
+      <rule>Pozycja</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Wzrost [0]</activationId>
+      <rule>Wzrost</rule>
+      <declarations></declarations>
+      <factHandleIds>1,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Wzrost [0]</activationId>
+      <rule>Wzrost</rule>
+      <declarations></declarations>
+      <factHandleIds>1,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>com.sample.DroolsTest$Wzrost@21afc5ce</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Wzrost [0]</activationId>
+      <rule>Wzrost</rule>
+      <declarations></declarations>
+      <factHandleIds>1,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Podejscie [0]</activationId>
+      <rule>Podejscie</rule>
+      <declarations></declarations>
+      <factHandleIds>1,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Podejscie [0]</activationId>
+      <rule>Podejscie</rule>
+      <declarations></declarations>
+      <factHandleIds>1,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>3</factId>
+      <objectToString>com.sample.DroolsTest$Pozycja@6cc8aa25</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Podejscie [0]</activationId>
+      <rule>Podejscie</rule>
+      <declarations></declarations>
+      <factHandleIds>1,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Agresja [0]</activationId>
+      <rule>Agresja</rule>
+      <declarations></declarations>
+      <factHandleIds>3,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Agresja [0]</activationId>
+      <rule>Agresja</rule>
+      <declarations></declarations>
+      <factHandleIds>3,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>4</factId>
+      <objectToString>com.sample.DroolsTest$Agresja@52ee37af</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Agresja [0]</activationId>
+      <rule>Agresja</rule>
+      <declarations></declarations>
+      <factHandleIds>3,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Pepe [0]</activationId>
+      <rule>Pepe</rule>
+      <declarations></declarations>
+      <factHandleIds>4,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Pepe [0]</activationId>
+      <rule>Pepe</rule>
+      <declarations></declarations>
+      <factHandleIds>4,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Pepe [0]</activationId>
+      <rule>Pepe</rule>
+      <declarations></declarations>
+      <factHandleIds>4,0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+  <engine>PHREAK</engine>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>
