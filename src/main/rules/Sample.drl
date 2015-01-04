@@ -26,7 +26,7 @@ import com.sample.DroolsTest.Gryzienie;
 rule "Pozycja"
 	when
 	then
-		System.out.println("Jako dziecko chcia≥em byÊ ...\n");
+		System.out.println("Jako dziecko chcia≈Çem byƒá ...\n");
 		int input = 0;
 		insert(new Pozycja(input));
 end
@@ -44,7 +44,7 @@ rule "Szczescie"
 	when
 		exists Wypady(value == false)
 	then
-		System.out.println("KtÛre zdanie najlepiej okreúla poziom Twojego szczÍúcia w øyciu?");
+		System.out.println("Kt√≥re zdanie najlepiej okre≈õla poziom Twojego szczƒôcia w ≈ºyciu?");
 		int input = 2;
 		insert(new Szczescie(input));
 end
@@ -53,7 +53,7 @@ rule "Wiek"
 	when
 		exists Szczescie(value == 1)
 	then
-		System.out.println("Podaj swÛj wiek");
+		System.out.println("Podaj sw√≥j wiek");
 		int input = 28;
 		insert(new Wiek(input));
 end
@@ -62,7 +62,7 @@ rule "Wzrost"
 	when
 		exists Pozycja(value != 0)
 	then
-		System.out.println("Jakiego jesteú wzrostu (odpowiedü podaj w cm)?");
+		System.out.println("Jakiego jeste≈õ wzrostu (odpowied≈∫ podaj w cm)?");
 		int input = 188;
 		insert(new Wzrost(input));
 end
@@ -72,7 +72,7 @@ rule "Agresja"
  		exists Pozycja(value == 1)
  		exists Wzrost(value > 174)
 	then
-		System.out.println("Czy jesteú agresywny?");
+		System.out.println("Czy jeste≈õ agresywny?");
  		int input = 2;
  		insert(new Agresja(input));
 end
@@ -81,7 +81,7 @@ rule "Taktyka"
 	when
 		exists Agresja(value != 2)
 	then
-		System.out.println("Jaki jest TwÛj schemat dzia≥ania?");
+		System.out.println("Jaki jest Tw√≥j schemat dzia≈Çania?");
 		int input = 2;
 		insert(new Taktyka(input));
 end
@@ -90,7 +90,7 @@ rule "Lider"
 	when
 		exists Taktyka(value == 1)
 	then
-		System.out.println("Czy masz zdolnoúci przywÛdcze?");
+		System.out.println("Czy masz zdolno≈õci przyw√≥dcze?");
 		boolean input = true;
 		insert(new Lider(input));
 end
@@ -108,7 +108,7 @@ rule "Podejscie"
 	when
 		exists Pozycja(value == 2)
 	then
-		System.out.println("KtÛre zdanie najlepiej podsumowuje Twoje podejúcie do øycia?");
+		System.out.println("Kt√≥re zdanie najlepiej podsumowuje Twoje podej≈õcie do ≈ºycia?");
 		int input = 1;
 		insert(new Pozycja(input));
 end
@@ -126,7 +126,7 @@ rule "Broda"
 	when
 		exists Ogrodnik(value == false)
 	then
-		System.out.println("Czy masz brodÍ?");
+		System.out.println("Czy masz brodƒô?");
 		boolean input = true;
 		insert(new Broda(input));
 end
@@ -135,7 +135,7 @@ rule "Zaimponowanie"
 	when
 		exists Broda(value == true)
 	then
-		System.out.println("Czy ≥atwo Ci zaimponowaÊ?");
+		System.out.println("Czy ≈Çatwo Ci zaimponowaƒá?");
 		boolean input = true;
 		insert(new Zaimponowanie(input));
 end
@@ -144,7 +144,7 @@ rule "Samolubnosc"
 	when
 		exists Podejscie(value == 1)
 	then
-		System.out.println("Czy jesteú samolubny?");
+		System.out.println("Czy jeste≈õ samolubny?");
 		int input = 2;
 		insert(new Samolubnosc(input));
 end
@@ -173,7 +173,7 @@ rule "Ego"
 	when
 		exists Imprezy(value == false)
 	then
-		System.out.println("Czy jesteú samolubny?");
+		System.out.println("Czy jeste≈õ samolubny?");
 		int input = 1;
 		insert(new Ego(input));
 end
@@ -182,7 +182,7 @@ rule "Nurkowanie"
  	when
  		exists Ego(value == 1)
  	then
- 		System.out.println("Czy lubisz nurkowaÊ?");
+ 		System.out.println("Czy lubisz nurkowaƒá?");
  		boolean input = true;
  		insert(new Nurkowanie(input));	
 end
@@ -191,7 +191,7 @@ rule "Zel"
  	when
  		exists Nurkowanie(value == true)
  	then
- 		System.out.println("Butelka øelu starcza Ci na...");
+ 		System.out.println("Butelka ≈ºelu starcza Ci na...");
  		int input = 2;
  		insert(new Zel(input));
 end
@@ -200,7 +200,7 @@ rule "Gryzienie"
 	when
 		exists Zel(value == 0)
 	then
-		System.out.println("Czy lubisz cos przegryüÊ od czasu do czasu?");
+		System.out.println("Czy lubisz co≈õ przegry≈∫ƒá od czasu do czasu?");
 		boolean input = true;
 		insert(new Gryzienie(input));
 end
@@ -215,7 +215,7 @@ rule "Neuer"
 		exists Pozycja(value == 0)
 		exists Wypady(value == true)
 	then
-		System.out.println("Jesteú Manuelem Neuerem!");
+		System.out.println("Jeste≈õ Manuelem Neuerem!");
 end
 
 rule "Kuszczak"
@@ -224,7 +224,7 @@ rule "Kuszczak"
 		exists Wypady(value == false)
 		exists Szczescie(value == 0)
 	then
-		System.out.println("Jesteú Tomaszem Kuszczakiem!");
+		System.out.println("Jeste≈õ Tomaszem Kuszczakiem!");
 end
 
 rule "Szczesny"
@@ -233,7 +233,7 @@ rule "Szczesny"
 		exists Wypady(value == false)
 		exists Szczescie(value == 2)
 	then
-		System.out.println("Jesteú Wojciechem SzczÍsnym!");
+		System.out.println("Jeste≈õ Wojciechem SzczÔøΩsnym!");
 end
 
 rule "Courtois"
@@ -243,7 +243,7 @@ rule "Courtois"
 		exists Szczescie(value == 1)
 		exists Wiek(value <= 22)
 	then
-		System.out.println("Jesteú Thibaut Courtois!");
+		System.out.println("Jeste≈õ Thibaut Courtois!");
 end
 
 rule "Lloris"
@@ -253,7 +253,7 @@ rule "Lloris"
 		exists Szczescie(value == 1)
 		exists Wiek(value <= 28)
 	then
-		System.out.println("Jesteú Hugo Llorisem!");
+		System.out.println("Jeste≈õ Hugo Llorisem!");
 end
 
 rule "Casillas"
@@ -263,7 +263,7 @@ rule "Casillas"
 		exists Szczescie(value == 1)
 		exists Wiek(value > 28)
 	then
-		System.out.println("Jesteú Ikerem Casillasem!");
+		System.out.println("Jeste≈õ Ikerem Casillasem!");
 end
 
 //DEF 
@@ -273,7 +273,7 @@ rule "Mascherano"
 		exists Pozycja(value == 1)
 		exists Wzrost(value <= 174)
 	then
-		System.out.println("Jesteú Javierem Mascherano!");
+		System.out.println("Jeste≈õ Javierem Mascherano!");
 end
 
 rule "Pepe"
@@ -281,7 +281,7 @@ rule "Pepe"
 		exists Pozycja(value == 1)
 		exists Agresja(value == 2)
 	then
-		System.out.println("Jesteú Pepe!");
+		System.out.println("Jeste≈õ Pepe!");
 end
 
 rule "Cionek"
@@ -290,7 +290,7 @@ rule "Cionek"
 		exists Agresja(value != 2)
 		exists Taktyka(value == 0)
 	then
-		System.out.println("Jesteú Thiago Cionkiem!");
+		System.out.println("Jeste≈õ Thiago Cionkiem!");
 end
 
 rule "Thiago Silva"
@@ -299,7 +299,7 @@ rule "Thiago Silva"
 		exists Agresja(value != 2)
 		exists Taktyka(value == 2)
 	then
-		System.out.println("Jesteú Thiago Silvπ!");
+		System.out.println("Jeste≈õ Thiago SilvƒÖ!");
 end
 
 rule "Sergio Ramos"
@@ -309,7 +309,7 @@ rule "Sergio Ramos"
 		exists Taktyka(value == 1)
 		exists Lider(value == true)
 	then
-		System.out.println("Jesteú Sergio Ramosem!");
+		System.out.println("Jeste≈õ Sergio Ramosem!");
 end
 
 rule "Alves"
@@ -320,7 +320,7 @@ rule "Alves"
 		exists Lider(value == false)
 		exists Banany(value == true)
 	then
-		System.out.println("Jesteú Danim Alvesem!");
+		System.out.println("Jeste≈õ Danim Alvesem!");
 end
 
 rule "Luiz"
@@ -331,7 +331,7 @@ rule "Luiz"
 		exists Lider(value == false)
 		exists Banany(value == false)
 	then
-		System.out.println("Jesteú Davidem Luizem!");
+		System.out.println("Jeste≈õ Davidem Luizem!");
 end
 
 //MID
@@ -342,7 +342,7 @@ rule "Xavi"
 		exists Podejscie(value == 0)
 		exists Ogrodnik(value == true)
 	then
-		System.out.println("Jesteú Xavim!");
+		System.out.println("Jeste≈õ Xavim!");
 end
 
 rule "Modric"
@@ -352,7 +352,7 @@ rule "Modric"
 		exists Ogrodnik(value == false)
 		exists Broda(value == false)
 	then
-		System.out.println("Jesteú Lukπ Moriciem!");
+		System.out.println("Jeste≈õ LukƒÖ Moriciem!");
 end
 
 rule "Xabi"
@@ -363,7 +363,7 @@ rule "Xabi"
 		exists Broda(value == true)
 		exists Zaimponowanie(value == false)
 	then
-		System.out.println("Jesteú Xabim Alonso!");
+		System.out.println("Jeste≈õ Xabim Alonso!");
 end
 
 rule "Pirlo"
@@ -374,7 +374,7 @@ rule "Pirlo"
 		exists Broda(value == true)
 		exists Zaimponowanie(value == true)
 	then
-		System.out.println("Jesteú Andrea Pirlo!");
+		System.out.println("Jeste≈õ Andrea Pirlo!");
 end
 
 rule "Fabregas"
@@ -383,7 +383,7 @@ rule "Fabregas"
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 0)
 	then
-		System.out.println("Jesteú Cescem Fabregasem!");
+		System.out.println("Jeste≈õ Cescem Fabregasem!");
 end
 
 rule "Isco"
@@ -392,7 +392,7 @@ rule "Isco"
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 1)
 	then
-		System.out.println("Jesteú Isco!");
+		System.out.println("Jeste≈õ Isco!");
 end
 
 rule "Robben"
@@ -401,7 +401,7 @@ rule "Robben"
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 2)
 	then
-		System.out.println("Jesteú Arienem Robbenem!");
+		System.out.println("Jeste≈õ Arienem Robbenem!");
 end
 
 //ATCK
@@ -412,7 +412,7 @@ rule "Giovinco"
 		exists Wzrost(value <= 169)
 		exists Chipsy(value == false)
 	then
-		System.out.println("Jesteú Sebastianem Giovinco!");
+		System.out.println("Jeste≈õ Sebastianem Giovinco!");
 end
 
 rule "Messi"
@@ -421,7 +421,7 @@ rule "Messi"
 		exists Wzrost(value <= 169)
 		exists Chipsy(value == true)
 	then
-		System.out.println("Jesteú Lionelem Messim!");
+		System.out.println("Jeste≈õ Lionelem Messim!");
 end
 
 rule "Balotelli"
@@ -430,7 +430,7 @@ rule "Balotelli"
 		exists Wzrost(value > 169)
 		exists Imprezy(value == true)
 	then
-		System.out.println("Jesteú Mario Balotellim!");
+		System.out.println("Jeste≈õ Mario Balotellim!");
 end
 
 rule "Benzema"
@@ -440,7 +440,7 @@ rule "Benzema"
 		exists Imprezy(value == false)
 		exists Ego(value == 0)
 	then
-		System.out.println("Jesteú Karimem Benzemπ!");
+		System.out.println("Jeste≈õ Karimem BenzemÔøΩ!");
 end
  
 rule "Zlatan"
@@ -450,7 +450,7 @@ rule "Zlatan"
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  	then
- 		System.out.println("Jesteú Zlatanem Ibrahimowiciem!");
+ 		System.out.println("Jeste≈õ Zlatanem Ibrahimowiciem!");
 end
 
 rule "Lewandowski"
@@ -461,7 +461,7 @@ rule "Lewandowski"
  		exists Ego(value == 2)
  		exists Nurkowanie(value == false)
  	then
- 		System.out.println("Jesteú Robertem Lewandowskim!");
+ 		System.out.println("Jeste≈õ Robertem Lewandowskim!");
 end
 
 rule "Neymar"
@@ -473,7 +473,7 @@ rule "Neymar"
  		exists Nurkowanie(value == true)
 		exists Zel(value == 1)
 	then
-		System.out.println("Jesteú Neymarem!");
+		System.out.println("Jeste≈õ Neymarem!");
 end
 
 rule "Ronaldo"
@@ -485,7 +485,7 @@ rule "Ronaldo"
  		exists Nurkowanie(value == true)
 		exists Zel(value == 2)
 	then
-		System.out.println("Jesteú Cristiano Ronaldo!");
+		System.out.println("Jeste≈õ Cristiano Ronaldo!");
 end
 
 rule "Rooney"
@@ -498,7 +498,7 @@ rule "Rooney"
 		exists Zel(value == 2)
 		exists Gryzienie(value == false)
 	then
-		System.out.println("Jesteú Waynem Rooney'em!");
+		System.out.println("Jeste≈õ Waynem Rooney'em!");
 end
 
 rule "Suarez"
@@ -511,5 +511,5 @@ rule "Suarez"
 		exists Zel(value == 2)
 		exists Gryzienie(value == true)
 	then
-		System.out.println("Jesteú Suarezem!");
+		System.out.println("Jeste≈õ Suarezem!");
 end

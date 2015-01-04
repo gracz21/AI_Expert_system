@@ -1,6 +1,6 @@
-1. Jako dziecko zawsze chcia³em byæ ...
+1. Jako dziecko zawsze chciaÅ‚em byÄ‡ ...
 a) bramkarzem. (0)
-b) obroñc¹. (1)
+b) obroÅ„cÄ…. (1)
 c) pomocnikiem. (2)
 d) napastnikiem. (3)
 
@@ -8,28 +8,28 @@ d) napastnikiem. (3)
 a) Nie (false)
 b) Tak (true)
 
-3. Które zdanie najlepiej okreœla poziom Twojego szczêœcia w ¿yciu?
-a) Gola potrafi mi strzeliæ nawet bramkarz przeciwnika ze swojego pola karnego. (0)
-b) Z wiêkszoœci sytuacji podbramkowych wychodzê zwyciêsko. (1)
-c) Szczêœcie mam wpisane w nazwisko. (2)
+3. KtÃ³re zdanie najlepiej okreÅ›la poziom Twojego szczÄ™Å›cia w Å¼yciu?
+a) Gola potrafi mi strzeliÄ‡ nawet bramkarz przeciwnika ze swojego pola karnego. (0)
+b) Z wiÄ™kszoÅ›ci sytuacji podbramkowych wychodzÄ™ zwyciÄ™sko. (1)
+c) SzczÄ™Å›cie mam wpisane w nazwisko. (2)
 
-4. Podaj swój wiek
+4. Podaj swÃ³j wiek
 //Pole tekstowe do podania wieku
 
-5. Jakiego jesteœ wzrostu (odpowiedŸ podaj w cm)?
+5. Jakiego jesteÅ› wzrostu (odpowiedÅº podaj w cm)?
 //Pole tekstowe do podania wzrostu
 
-6. Czy jesteœ agresywny?
+6. Czy jesteÅ› agresywny?
 a) Nie, jestem raczej spokojny. (0)
 b) Czasami bywam agresywny. (1)
-c) Czekaj, muszê kogoœ zabiæ. Zaraz wracam ... (2)
+c) Czekaj, muszÄ™ kogoÅ› zabiÄ‡. Zaraz wracam ... (2)
 
-7. Jaki jest Twój schemat dzia³ania?
-a) Nie dzia³am i nie myœlê. (0)
-b) Najpierw dzia³am, a potem myœlê nad konsekwencjami. (1)
-c) Najpierw myœlê, a potem dzia³am wed³ug opracowanego planu. (2)
+7. Jaki jest TwÃ³j schemat dziaÅ‚ania?
+a) Nie dziaÅ‚am i nie myÅ›lÄ™. (0)
+b) Najpierw dziaÅ‚am, a potem myÅ›lÄ™ nad konsekwencjami. (1)
+c) Najpierw myÅ›lÄ™, a potem dziaÅ‚am wedÅ‚ug opracowanego planu. (2)
 
-8. Czy masz zdolnoœci przywódcze?
+8. Czy masz zdolnoÅ›ci przywÃ³dcze?
 a) Nie (false)
 b) Tak (true)
 
@@ -37,25 +37,25 @@ b) Tak (true)
 a) Nie (false)
 b) Tak (true)
 
-10. Które zdanie najlepiej podsumowuje Twoje podejœcie do ¿ycia?
-a) Preferujê powolne rozegranie. (0)
-b) Lubiê frontalny atak. (1)
+10. KtÃ³re zdanie najlepiej podsumowuje Twoje podejÅ›cie do Å¼ycia?
+a) PreferujÄ™ powolne rozegranie. (0)
+b) LubiÄ™ frontalny atak. (1)
 
 11. Czy lubisz prace ogrodowe?
 a) Nie (false)
 b) Tak (true)
 
-12. Czy masz brodê?
+12. Czy masz brodÄ™?
 a) Nie (false)
 b) Tak (true)
 
-13. Czy ³atwo Ci zaimponowaæ?
+13. Czy Å‚atwo Ci zaimponowaÄ‡?
 a) Nie (false)
 b) Tak (true)
 
-14. Czy jesteœ samolubny?
-a) Nie, czêsto lubiê asystowaæ i pomagaæ innym ludziom. (0)
-b) Nie nale¿ê do najbardziej samolubnych, ale czasami lubiê zabraæ siê samemu z pi³k¹. (1)
+14. Czy jesteÅ› samolubny?
+a) Nie, czÄ™sto lubiÄ™ asystowaÄ‡ i pomagaÄ‡ innym ludziom. (0)
+b) Nie naleÅ¼Ä™ do najbardziej samolubnych, ale czasami lubiÄ™ zabraÄ‡ siÄ™ samemu z piÅ‚kÄ…. (1)
 c) ??? (2)
 
 15. Czy lubisz chipsy Lay'sy?
@@ -66,16 +66,16 @@ b) Tak (true)
 a) Nie (false)
 b) Tak (true)
 
-17. Czy jesteœ zarozumia³y?
+17. Czy jesteÅ› zarozumiaÅ‚y?
 a) Nie (0)
 b) ??? (1)
-c) Móg³byœ nie zwracaæ siê do mnie per Ty? (2)
+c) MÃ³gÅ‚byÅ› nie zwracaÄ‡ siÅ› do mnie per Ty? (2)
 
-18. Butelka ¿elu starcza Ci na...
-a) Nie uzywam ¿elu lub starcza mi na ok. pó³ roku. (0)
-b) miesi¹c. (1)
-c) tydzieñ. (2)
+18. Butelka Å¼elu starcza Ci na...
+a) Nie uzywam Å¼elu lub starcza mi na ok. pÃ³Å‚ roku. (0)
+b) miesiÄ…c. (1)
+c) tydzieÅ„. (2)
 
-19. Czy lubisz cos przegryŸæ od czasu do czasu?
+19. Czy lubisz cos przegryÅºÄ‡ od czasu do czasu?
 a) Nie (false)
 b) ??? (true)
