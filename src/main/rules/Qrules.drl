@@ -175,7 +175,7 @@ rule "Chipsy"
 	when
 		x:Init()
 		exists Pozycja(value == 3)
-		exists Wzrost(value <= 169)
+		exists Wzrost(value == 0)
 	then
 		boolean input = MainWindow.instance().getBoolAnswer(x.questions[14].text,
 			x.questions[14].answers);
@@ -186,7 +186,7 @@ rule "Imprezy"
 	when
 		x:Init()
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 	then
 		boolean input = MainWindow.instance().getBoolAnswer(x.questions[15].text,
 			x.questions[15].answers);
