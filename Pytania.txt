@@ -13,11 +13,15 @@ a) Gola potrafi mi strzelić nawet bramkarz przeciwnika ze swojego pola karnego.
 b) Z większości sytuacji podbramkowych wychodzę zwycięsko. (1)
 c) Szczęście mam wpisane w nazwisko. (2)
 
-4. Podaj swój wiek
-//Pole tekstowe do podania wieku
+4. W jakim jesteś wieku?
+a) 22 lata lub mniej (0)
+b) Między 23, a 28 rokiem życia (1)
+c) Powyżej 28 lat (2)
 
-5. Jakiego jesteś wzrostu (odpowiedź podaj w cm)?
-//Pole tekstowe do podania wzrostu
+5. Jakiego jesteś wzrostu?
+a) 169 cm lub mniej (0)
+b) Między 170 cm, a 174 cm (1)
+c) Powyżej 174 cm (2)
 
 6. Czy jesteś agresywny?
 a) Nie, jestem raczej spokojny. (0)
@@ -56,7 +60,7 @@ b) Tak (true)
 14. Czy jesteś samolubny?
 a) Nie, często lubię asystować i pomagać innym ludziom. (0)
 b) Nie należę do najbardziej samolubnych, ale czasami lubię zabrać się samemu z piłką. (1)
-c) ??? (2)
+c) Programie, dlaczego używasz zasobów MOJEGO komputera? (2)
 
 15. Czy lubisz chipsy Lay'sy?
 a) Nie (false)
@@ -67,15 +71,15 @@ a) Nie (false)
 b) Tak (true)
 
 17. Czy jesteś zarozumiały?
-a) Nie (0)
-b) ??? (1)
-c) Mógłbyś nie zwracać siś do mnie per Ty? (2)
+a) Nie. (0)
+b) Może trochę. (1)
+c) Mógłbyś nie zwracać się do mnie per Ty? (2)
 
 18. Butelka żelu starcza Ci na...
-a) Nie uzywam żelu lub starcza mi na ok. pół roku. (0)
+a) Nie uzywam żelu/starcza mi na ok. pół roku. (0)
 b) miesiąc. (1)
 c) tydzień. (2)
 
-19. Czy lubisz cos przegryźć od czasu do czasu?
-a) Nie (false)
-b) ??? (true)
+19. Czy lubisz coś przegryźć od czasu do czasu?
+a) Nie, preferuję posiłki w regularnych odstępach czasu. (false)
+b) Tak, a jakże. (true)
