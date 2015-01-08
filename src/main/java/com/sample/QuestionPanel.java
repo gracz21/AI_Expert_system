@@ -13,11 +13,26 @@ public class QuestionPanel extends JPanel implements ActionListener
     private ButtonGroup buttonGroup;
     private java.util.List<JRadioButton> buttons;
     private JButton confirmButton;
+
+    protected void addComponentWithConstraints(JComponent comp,
+                                               GridBagLayout gbl,
+                                               GridBagConstraints gbc)
+    {
+        gbl.setConstraints(comp, gbc);
+        add(comp);
+    }
     
     public QuestionPanel(String question, String[] options)
     {
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        add(new JLabel(question));
+        GridBagLayout gbl = new GridBagLayout();
+        GridBagConstraints gbc = new GridBagConstraints();
+        setLayout(gbl);
+
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        
+        gbc.weighty = 5.0;
+        addComponentWithConstraints(new JLabel(question), gbl, gbc);
+        
         buttons = new ArrayList<JRadioButton>();
         buttonGroup = new ButtonGroup();
         for (int i = 0; i < options.length; i++)
@@ -27,12 +42,14 @@ public class QuestionPanel extends JPanel implements ActionListener
             optionButton.addActionListener(this);
             buttons.add(optionButton);
             buttonGroup.add(optionButton);
-            add(optionButton);
+            gbc.weighty = 0.5;
+            addComponentWithConstraints(optionButton, gbl, gbc);
         }
         confirmButton = new JButton("Next");
         confirmButton.addActionListener(this);
         confirmButton.setEnabled(false);
-        add(confirmButton);
+        gbc.weighty = 4.0;
+        addComponentWithConstraints(confirmButton, gbl, gbc);
     }
 
     @Override

@@ -28,22 +28,20 @@ public class MainWindow extends JFrame
     public boolean getBoolAnswer(String question, String[] options)
     {
         getContentPane().removeAll();
-        getContentPane().repaint();
+        setLayout(new BorderLayout());
         questionPanel = new QuestionPanel(question, options);
-        add(questionPanel);
+        add(questionPanel, BorderLayout.CENTER);
         pack();
-        getContentPane().repaint();
         return (questionPanel.getAnswer() != 0);
     }
 
     public int getIntAnswer(String question, String... options)
     {
         getContentPane().removeAll();
-        getContentPane().repaint();
+        setLayout(new BorderLayout());
         questionPanel = new QuestionPanel(question, options);
-        add(questionPanel);
+        add(questionPanel, BorderLayout.CENTER);
         pack();
-        getContentPane().repaint();
         return questionPanel.getAnswer();
     }
 
@@ -57,7 +55,8 @@ public class MainWindow extends JFrame
                     JLabel waitLabel = new JLabel("waiting for rules to load...");
                     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
                     panel.add(waitLabel);
-                    mw.add(waitLabel);
+                    mw.setLayout(new BorderLayout());
+                    mw.add(waitLabel, BorderLayout.CENTER);
                     mw.pack();
                     mw.setVisible(true);
                     mw.getContentPane().repaint();

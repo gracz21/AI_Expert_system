@@ -4,107 +4,107 @@
   <events>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Pozycja [0]</activationId>
-      <rule>Pozycja</rule>
+      <activationId>init [0]</activationId>
+      <rule>init</rule>
       <declarations></declarations>
       <factHandleIds>0</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Pozycja [0]</activationId>
-      <rule>Pozycja</rule>
+      <activationId>init [0]</activationId>
+      <rule>init</rule>
       <declarations></declarations>
       <factHandleIds>0</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>1</factId>
-      <objectToString>com.sample.DroolsTest$Pozycja@535e5cf8</objectToString>
+      <objectToString>com.sample.Questions$Init@6683de93</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>Pozycja [0]</activationId>
-      <rule>Pozycja</rule>
+      <activationId>init [0]</activationId>
+      <rule>init</rule>
       <declarations></declarations>
       <factHandleIds>0</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Wzrost [0]</activationId>
-      <rule>Wzrost</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <activationId>Pozycja [1]</activationId>
+      <rule>Pozycja</rule>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Wzrost [0]</activationId>
-      <rule>Wzrost</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <activationId>Pozycja [1]</activationId>
+      <rule>Pozycja</rule>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>2</factId>
-      <objectToString>com.sample.DroolsTest$Wzrost@21afc5ce</objectToString>
+      <objectToString>com.sample.Objects$Pozycja@14c62558</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>Wzrost [0]</activationId>
-      <rule>Wzrost</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <activationId>Pozycja [1]</activationId>
+      <rule>Pozycja</rule>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Podejscie [0]</activationId>
-      <rule>Podejscie</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <activationId>Wzrost [1]</activationId>
+      <rule>Wzrost</rule>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>2,1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Podejscie [0]</activationId>
-      <rule>Podejscie</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <activationId>Wzrost [1]</activationId>
+      <rule>Wzrost</rule>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>2,1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>3</factId>
-      <objectToString>com.sample.DroolsTest$Pozycja@6cc8aa25</objectToString>
+      <objectToString>com.sample.Objects$Wzrost@788f75bd</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>Podejscie [0]</activationId>
-      <rule>Podejscie</rule>
-      <declarations></declarations>
-      <factHandleIds>1,0</factHandleIds>
+      <activationId>Wzrost [1]</activationId>
+      <rule>Wzrost</rule>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>2,1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
-      <activationId>Agresja [0]</activationId>
+      <activationId>Agresja [1]</activationId>
       <rule>Agresja</rule>
-      <declarations></declarations>
-      <factHandleIds>3,0</factHandleIds>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>3,1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
-      <activationId>Agresja [0]</activationId>
+      <activationId>Agresja [1]</activationId>
       <rule>Agresja</rule>
-      <declarations></declarations>
-      <factHandleIds>3,0</factHandleIds>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>3,1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>4</factId>
-      <objectToString>com.sample.DroolsTest$Agresja@52ee37af</objectToString>
+      <objectToString>com.sample.Objects$Agresja@27656044</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
-      <activationId>Agresja [0]</activationId>
+      <activationId>Agresja [1]</activationId>
       <rule>Agresja</rule>
-      <declarations></declarations>
-      <factHandleIds>3,0</factHandleIds>
+      <declarations>x=com.sample.Questions$Init@6683de93</declarations>
+      <factHandleIds>3,1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
