@@ -75,11 +75,15 @@ a) Nie. (0)
 b) Może trochę. (1)
 c) Mógłbyś nie zwracać się do mnie per Ty? (2)
 
-18. Butelka żelu do włosów starcza Ci na...
+18. Czy lubisz nurkować?
+a) Nie (false)
+b) Tak (true)
+
+19. Butelka żelu do włosów starcza Ci na...
 a) Nie uzywam żelu/starcza mi na ponad miesiąc. (0)
 b) miesiąc lub kilka tygodni. (1)
 c) tydzień lub mniej. (2)
 
-19. Czy lubisz coś przegryźć od czasu do czasu?
+20. Czy lubisz coś przegryźć od czasu do czasu?
 a) Nie, preferuję posiłki w regularnych odstępach czasu. (false)
 b) Tak, a jakże. (true)
