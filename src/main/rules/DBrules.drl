@@ -153,7 +153,7 @@ end
 
 rule "Xavi"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 0)
 		exists Ogrodnik(value == true)
 	then
@@ -162,7 +162,7 @@ end
 
 rule "Modric"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 0)
 		exists Ogrodnik(value == false)
 		exists Broda(value == false)
@@ -172,29 +172,29 @@ end
 
 rule "Xabi"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 0)
 		exists Ogrodnik(value == false)
 		exists Broda(value == true)
-		exists Zaimponowanie(value == false)
+		exists Zaimponowanie(value == true)
 	then
 		System.out.println("Jesteś Xabim Alonso!");
 end
 
 rule "Pirlo"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 0)
 		exists Ogrodnik(value == false)
 		exists Broda(value == true)
-		exists Zaimponowanie(value == true)
+		exists Zaimponowanie(value == false)
 	then
 		System.out.println("Jesteś Andrea Pirlo!");
 end
 
 rule "Fabregas"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 0)
 	then
@@ -203,7 +203,7 @@ end
 
 rule "Isco"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 1)
 	then
@@ -212,7 +212,7 @@ end
 
 rule "Robben"
 	when
-		exists Pozycja(value == 1)
+		exists Pozycja(value == 2)
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 2)
 	then
@@ -273,7 +273,7 @@ rule "Lewandowski"
 		exists Pozycja(value == 3)
 		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
- 		exists Ego(value == 2)
+ 		exists Ego(value == 1)
  		exists Nurkowanie(value == false)
  	then
  		System.out.println("Jesteś Robertem Lewandowskim!");
@@ -284,7 +284,7 @@ rule "Neymar"
 		exists Pozycja(value == 3)
 		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
- 		exists Ego(value == 2)
+ 		exists Ego(value == 1)
  		exists Nurkowanie(value == true)
 		exists Zel(value == 1)
 	then
@@ -296,7 +296,7 @@ rule "Ronaldo"
 		exists Pozycja(value == 3)
 		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
- 		exists Ego(value == 2)
+ 		exists Ego(value == 1)
  		exists Nurkowanie(value == true)
 		exists Zel(value == 2)
 	then
@@ -308,9 +308,9 @@ rule "Rooney"
 		exists Pozycja(value == 3)
 		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
- 		exists Ego(value == 2)
+ 		exists Ego(value == 1)
  		exists Nurkowanie(value == true)
-		exists Zel(value == 2)
+		exists Zel(value == 0)
 		exists Gryzienie(value == false)
 	then
 		System.out.println("Jesteś Waynem Rooney'em!");
@@ -321,9 +321,9 @@ rule "Suarez"
 		exists Pozycja(value == 3)
 		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
- 		exists Ego(value == 2)
+ 		exists Ego(value == 1)
  		exists Nurkowanie(value == true)
-		exists Zel(value == 2)
+		exists Zel(value == 0)
 		exists Gryzienie(value == true)
 	then
 		System.out.println("Jesteś Suarezem!");

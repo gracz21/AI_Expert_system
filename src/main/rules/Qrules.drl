@@ -73,7 +73,7 @@ end
 rule "Wzrost"
 	when
 		x:Init()
-		exists Pozycja(value != 0)
+		exists Pozycja(value == 1 || value == 3)
 	then
 		int input = MainWindow.instance().getIntAnswer(x.questions[4].text,
 			x.questions[4].answers);
@@ -128,7 +128,7 @@ rule "Podejscie"
 	then
 		int input = MainWindow.instance().getIntAnswer(x.questions[9].text,
 			x.questions[9].answers);
-		insert(new Pozycja(input));
+		insert(new Podejscie(input));
 end
 
 rule "Ogrodnik"
