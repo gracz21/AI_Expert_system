@@ -76,9 +76,9 @@ b) Może trochę. (1)
 c) Mógłbyś nie zwracać się do mnie per Ty? (2)
 
 18. Butelka żelu starcza Ci na...
-a) Nie uzywam żelu/starcza mi na ok. pół roku. (0)
-b) miesiąc. (1)
-c) tydzień. (2)
+a) Nie uzywam żelu/starcza mi na ponad miesiąc. (0)
+b) miesiąc/kilka tygodni. (1)
+c) tydzień lub mniej. (2)
 
 19. Czy lubisz coś przegryźć od czasu do czasu?
 a) Nie, preferuję posiłki w regularnych odstępach czasu. (false)
