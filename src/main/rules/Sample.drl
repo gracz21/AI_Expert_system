@@ -1,33 +1,36 @@
 package com.sample
  
-import com.sample.DroolsTest.Pozycja;
-import com.sample.DroolsTest.Ego;
-import com.sample.DroolsTest.Agresja;
-import com.sample.DroolsTest.Zel;
-import com.sample.DroolsTest.Nurkowanie;
-import com.sample.DroolsTest.Wypady;
-import com.sample.DroolsTest.Szczescie;
-import com.sample.DroolsTest.Wzrost; 
-import com.sample.DroolsTest.Wiek;
-import com.sample.DroolsTest.Banany;
-import com.sample.DroolsTest.Taktyka;
-import com.sample.DroolsTest.Imprezy;
-import com.sample.DroolsTest.Lider;
-import com.sample.DroolsTest.Podejscie;
-import com.sample.DroolsTest.Ogrodnik;
-import com.sample.DroolsTest.Broda;
-import com.sample.DroolsTest.Zaimponowanie;
-import com.sample.DroolsTest.Samolubnosc;
-import com.sample.DroolsTest.Chipsy;
-import com.sample.DroolsTest.Gryzienie;
+import com.sample.Questions.Pozycja;
+import com.sample.Questions.Ego;
+import com.sample.Questions.Agresja;
+import com.sample.Questions.Zel;
+import com.sample.Questions.Nurkowanie;
+import com.sample.Questions.Wypady;
+import com.sample.Questions.Szczescie;
+import com.sample.Questions.Wzrost; 
+import com.sample.Questions.Wiek;
+import com.sample.Questions.Banany;
+import com.sample.Questions.Taktyka;
+import com.sample.Questions.Imprezy;
+import com.sample.Questions.Lider;
+import com.sample.Questions.Podejscie;
+import com.sample.Questions.Ogrodnik;
+import com.sample.Questions.Broda;
+import com.sample.Questions.Zaimponowanie;
+import com.sample.Questions.Samolubnosc;
+import com.sample.Questions.Chipsy;
+import com.sample.Questions.Gryzienie;
 
 //Pytania 
 
 rule "Pozycja"
 	when
 	then
-		System.out.println("Jako dziecko chciałem być ...\n");
-		int input = 0;
+		int input = MainWindow.instance().getIntAnswer("Jako dziecko chciałem być ...\n", 
+                                                       "bramkarzem",
+                                                       "obrońcą",
+                                                       "pomocnikiem",
+                                                       "napastnikiem");
 		insert(new Pozycja(input));
 end
 
@@ -35,8 +38,8 @@ rule "Wypady"
 	when
 		exists Pozycja(value == 0)
 	then
-		System.out.println("Czy lubisz dalekie wypady?");
-		boolean input = true;
+		boolean input = MainWindow.instance().getBoolAnswer("Czy lubisz dalekie wypady?",
+                                                            "Nie", "Tak");
 		insert(new Wypady(input));
 end
 
@@ -44,8 +47,10 @@ rule "Szczescie"
 	when
 		exists Wypady(value == false)
 	then
-		System.out.println("Które zdanie najlepiej określa poziom Twojego szczęcia w życiu?");
-		int input = 2;
+		int input = MainWindow.instance().getIntAnswer("Które zdanie najlepiej określa poziom Twojego szczęścia w życiu?", 
+                                                       "Gola potrafi mi strzelić nawet bramkarz przeciwnika ze swojego pola karnego.",
+                                                       "Z większości sytuacji podbramkowych wychodzę zwycięsko.",
+                                                       "Szczęście mam wpisane w nazwisko.");
 		insert(new Szczescie(input));
 end
 

@@ -23,7 +23,7 @@ public class QuestionPanel extends JPanel implements ActionListener
         for (int i = 0; i < options.length; i++)
         {
             JRadioButton optionButton = new JRadioButton(options[i]);
-            optionButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+            optionButton.setAlignmentX(Component.LEFT_ALIGNMENT);
             optionButton.addActionListener(this);
             buttons.add(optionButton);
             buttonGroup.add(optionButton);
