@@ -1,215 +1,25 @@
-package com.sample
- 
-import com.sample.Questions.Pozycja;
-import com.sample.Questions.Ego;
-import com.sample.Questions.Agresja;
-import com.sample.Questions.Zel;
-import com.sample.Questions.Nurkowanie;
-import com.sample.Questions.Wypady;
-import com.sample.Questions.Szczescie;
-import com.sample.Questions.Wzrost; 
-import com.sample.Questions.Wiek;
-import com.sample.Questions.Banany;
-import com.sample.Questions.Taktyka;
-import com.sample.Questions.Imprezy;
-import com.sample.Questions.Lider;
-import com.sample.Questions.Podejscie;
-import com.sample.Questions.Ogrodnik;
-import com.sample.Questions.Broda;
-import com.sample.Questions.Zaimponowanie;
-import com.sample.Questions.Samolubnosc;
-import com.sample.Questions.Chipsy;
-import com.sample.Questions.Gryzienie;
+package com.sample;
 
-//Pytania 
-
-rule "Pozycja"
-	when
-	then
-		int input = MainWindow.instance().getIntAnswer("Jako dziecko chciałem być ...\n", 
-                                                       "bramkarzem",
-                                                       "obrońcą",
-                                                       "pomocnikiem",
-                                                       "napastnikiem");
-		insert(new Pozycja(input));
-end
-
-rule "Wypady"
-	when
-		exists Pozycja(value == 0)
-	then
-		boolean input = MainWindow.instance().getBoolAnswer("Czy lubisz dalekie wypady?",
-                                                            "Nie", "Tak");
-		insert(new Wypady(input));
-end
-
-rule "Szczescie"
-	when
-		exists Wypady(value == false)
-	then
-		int input = MainWindow.instance().getIntAnswer("Które zdanie najlepiej określa poziom Twojego szczęścia w życiu?", 
-                                                       "Gola potrafi mi strzelić nawet bramkarz przeciwnika ze swojego pola karnego.",
-                                                       "Z większości sytuacji podbramkowych wychodzę zwycięsko.",
-                                                       "Szczęście mam wpisane w nazwisko.");
-		insert(new Szczescie(input));
-end
-
-rule "Wiek"
-	when
-		exists Szczescie(value == 1)
-	then
-		System.out.println("Podaj swój wiek");
-		int input = 28;
-		insert(new Wiek(input));
-end
-
-rule "Wzrost"
-	when
-		exists Pozycja(value != 0)
-	then
-		System.out.println("Jakiego jesteś wzrostu (odpowiedź podaj w cm)?");
-		int input = 188;
-		insert(new Wzrost(input));
-end
-
-rule "Agresja"
-	when
- 		exists Pozycja(value == 1)
- 		exists Wzrost(value > 174)
-	then
-		System.out.println("Czy jesteś agresywny?");
- 		int input = 2;
- 		insert(new Agresja(input));
-end
-
-rule "Taktyka"
-	when
-		exists Agresja(value != 2)
-	then
-		System.out.println("Jaki jest Twój schemat działania?");
-		int input = 2;
-		insert(new Taktyka(input));
-end
-
-rule "Lider"
-	when
-		exists Taktyka(value == 1)
-	then
-		System.out.println("Czy masz zdolności przywódcze?");
-		boolean input = true;
-		insert(new Lider(input));
-end
-
-rule "Banany"
-	when
-		exists Lider(value == false)
-	then
-		System.out.println("Czy lubisz banany?");
-		boolean input = true;
-		insert(new Banany(input));
-end
-
-rule "Podejscie"
-	when
-		exists Pozycja(value == 2)
-	then
-		System.out.println("Które zdanie najlepiej podsumowuje Twoje podejście do życia?");
-		int input = 1;
-		insert(new Pozycja(input));
-end
-
-rule "Ogrodnik"
-	when
-		exists Podejscie(value == 0)
-	then
-		System.out.println("Czy lubisz prace ogrodowe?");
-		boolean input = false;
-		insert(new Ogrodnik(input));
-end
-
-rule "Broda"
-	when
-		exists Ogrodnik(value == false)
-	then
-		System.out.println("Czy masz brodę?");
-		boolean input = true;
-		insert(new Broda(input));
-end
-
-rule "Zaimponowanie"
-	when
-		exists Broda(value == true)
-	then
-		System.out.println("Czy łatwo Ci zaimponować?");
-		boolean input = true;
-		insert(new Zaimponowanie(input));
-end
-
-rule "Samolubnosc"
-	when
-		exists Podejscie(value == 1)
-	then
-		System.out.println("Czy jesteś samolubny?");
-		int input = 2;
-		insert(new Samolubnosc(input));
-end
-
-rule "Chipsy"
-	when
-		exists Pozycja(value == 3)
-		exists Wzrost(value <= 169)
-	then
-		System.out.println("Czy lubisz chipsy Lay'sy?");
-		boolean input = false;
-		insert(new Chipsy(input));
-end
-
-rule "Imprezy"
-	when
-		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
-	then
-		System.out.println("Czy lubisz wybuchowe imprezy?");
-		boolean input = true;
-		insert(new Imprezy(input));
-end
-
-rule "Ego"
-	when
-		exists Imprezy(value == false)
-	then
-		System.out.println("Czy jesteś samolubny?");
-		int input = 1;
-		insert(new Ego(input));
-end
-
-rule "Nurkowanie"
- 	when
- 		exists Ego(value == 1)
- 	then
- 		System.out.println("Czy lubisz nurkować?");
- 		boolean input = true;
- 		insert(new Nurkowanie(input));	
-end
-
-rule "Zel"
- 	when
- 		exists Nurkowanie(value == true)
- 	then
- 		System.out.println("Butelka żelu starcza Ci na...");
- 		int input = 2;
- 		insert(new Zel(input));
-end
-
-rule "Gryzienie"
-	when
-		exists Zel(value == 0)
-	then
-		System.out.println("Czy lubisz coś przegryźć od czasu do czasu?");
-		boolean input = true;
-		insert(new Gryzienie(input));
-end
-
+import com.sample.Objects.Pozycja;
+import com.sample.Objects.Ego;
+import com.sample.Objects.Agresja;
+import com.sample.Objects.Zel;
+import com.sample.Objects.Nurkowanie;
+import com.sample.Objects.Wypady;
+import com.sample.Objects.Szczescie;
+import com.sample.Objects.Wzrost; 
+import com.sample.Objects.Wiek;
+import com.sample.Objects.Banany;
+import com.sample.Objects.Taktyka;
+import com.sample.Objects.Imprezy;
+import com.sample.Objects.Lider;
+import com.sample.Objects.Podejscie;
+import com.sample.Objects.Ogrodnik;
+import com.sample.Objects.Broda;
+import com.sample.Objects.Zaimponowanie;
+import com.sample.Objects.Samolubnosc;
+import com.sample.Objects.Chipsy;
+import com.sample.Objects.Gryzienie;
 
 //Baza wiedzy
 
@@ -246,7 +56,7 @@ rule "Courtois"
 		exists Pozycja(value == 0)
 		exists Wypady(value == false)
 		exists Szczescie(value == 1)
-		exists Wiek(value <= 22)
+		exists Wiek(value == 0)
 	then
 		System.out.println("Jesteś Thibaut Courtois!");
 end
@@ -256,7 +66,7 @@ rule "Lloris"
 		exists Pozycja(value == 0)
 		exists Wypady(value == false)
 		exists Szczescie(value == 1)
-		exists Wiek(value <= 28)
+		exists Wiek(value == 1)
 	then
 		System.out.println("Jesteś Hugo Llorisem!");
 end
@@ -266,7 +76,7 @@ rule "Casillas"
 		exists Pozycja(value == 0)
 		exists Wypady(value == false)
 		exists Szczescie(value == 1)
-		exists Wiek(value > 28)
+		exists Wiek(value == 2)
 	then
 		System.out.println("Jesteś Ikerem Casillasem!");
 end
@@ -276,7 +86,7 @@ end
 rule "Mascherano"
 	when
 		exists Pozycja(value == 1)
-		exists Wzrost(value <= 174)
+		exists Wzrost(value <= 1)
 	then
 		System.out.println("Jesteś Javierem Mascherano!");
 end
@@ -414,7 +224,7 @@ end
 rule "Giovinco"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value <= 169)
+		exists Wzrost(value == 0)
 		exists Chipsy(value == false)
 	then
 		System.out.println("Jesteś Sebastianem Giovinco!");
@@ -423,7 +233,7 @@ end
 rule "Messi"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value <= 169)
+		exists Wzrost(value == 0)
 		exists Chipsy(value == true)
 	then
 		System.out.println("Jesteś Lionelem Messim!");
@@ -432,7 +242,7 @@ end
 rule "Balotelli"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == true)
 	then
 		System.out.println("Jesteś Mario Balotellim!");
@@ -441,7 +251,7 @@ end
 rule "Benzema"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
 		exists Ego(value == 0)
 	then
@@ -451,7 +261,7 @@ end
 rule "Zlatan"
  	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  	then
@@ -461,7 +271,7 @@ end
 rule "Lewandowski"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  		exists Nurkowanie(value == false)
@@ -472,7 +282,7 @@ end
 rule "Neymar"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  		exists Nurkowanie(value == true)
@@ -484,7 +294,7 @@ end
 rule "Ronaldo"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  		exists Nurkowanie(value == true)
@@ -496,7 +306,7 @@ end
 rule "Rooney"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  		exists Nurkowanie(value == true)
@@ -509,7 +319,7 @@ end
 rule "Suarez"
 	when
 		exists Pozycja(value == 3)
-		exists Wzrost(value > 169)
+		exists Wzrost(value > 0)
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  		exists Nurkowanie(value == true)

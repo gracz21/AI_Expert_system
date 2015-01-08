@@ -25,11 +25,11 @@ public class MainWindow extends JFrame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public boolean getBoolAnswer(String question, String falseOption, String trueOption)
+    public boolean getBoolAnswer(String question, String[] options)
     {
         getContentPane().removeAll();
         getContentPane().repaint();
-        questionPanel = new QuestionPanel(question, new String[] {falseOption, trueOption});
+        questionPanel = new QuestionPanel(question, options);
         add(questionPanel);
         pack();
         getContentPane().repaint();
