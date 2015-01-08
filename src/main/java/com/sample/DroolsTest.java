@@ -39,7 +39,8 @@ public class DroolsTest {
 
     private static KnowledgeBase readKnowledgeBase() throws Exception {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
-        kbuilder.add(ResourceFactory.newClassPathResource("Sample.drl"), ResourceType.DRL);
+        kbuilder.add(ResourceFactory.newClassPathResource("Qrules.drl"), ResourceType.DRL);
+        kbuilder.add(ResourceFactory.newClassPathResource("DBrules.drl"), ResourceType.DRL);
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {
             for (KnowledgeBuilderError error: errors) {
