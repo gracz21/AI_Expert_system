@@ -1,1 +1,331 @@
-../src/main/rules/DBrules.drl
+package com.sample;
+
+import com.sample.Objects.Pozycja;
+import com.sample.Objects.Ego;
+import com.sample.Objects.Agresja;
+import com.sample.Objects.Zel;
+import com.sample.Objects.Nurkowanie;
+import com.sample.Objects.Wypady;
+import com.sample.Objects.Szczescie;
+import com.sample.Objects.Wzrost; 
+import com.sample.Objects.Wiek;
+import com.sample.Objects.Banany;
+import com.sample.Objects.Taktyka;
+import com.sample.Objects.Imprezy;
+import com.sample.Objects.Lider;
+import com.sample.Objects.Podejscie;
+import com.sample.Objects.Ogrodnik;
+import com.sample.Objects.Broda;
+import com.sample.Objects.Zaimponowanie;
+import com.sample.Objects.Samolubnosc;
+import com.sample.Objects.Chipsy;
+import com.sample.Objects.Gryzienie;
+import com.sample.MainWindow;
+
+//Baza wiedzy
+
+//GK
+
+rule "Neuer"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Manuelem Neuerem!", "img/Neuer.jpg");
+end
+
+rule "Kuszczak"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 0)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Tomaszem Kuszczakiem!", "img/Kuszczak.jpg");
+end
+
+rule "Szczesny"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 2)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Wojciechem Szczęsnym!", "img/Szczesny.jpg");
+end
+
+rule "Courtois"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 1)
+		exists Wiek(value == 0)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Thibaut Courtois!", "img/Courtois.jpg");
+end
+
+rule "Lloris"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 1)
+		exists Wiek(value == 1)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Hugo Llorisem!", "img/Lloris.jpg");
+end
+
+rule "Casillas"
+	when
+		exists Pozycja(value == 0)
+		exists Wypady(value == false)
+		exists Szczescie(value == 1)
+		exists Wiek(value == 2)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Ikerem Casillasem!", "img/Casillas.jpg");
+end
+
+//DEF 
+
+rule "Mascherano"
+	when
+		exists Pozycja(value == 1)
+		exists Wzrost(value <= 1)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Javierem Mascherano!", "img/Mascherano.jpg");
+end
+
+rule "Pepe"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value == 2)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Pepe!", "img/Pepe.jpg");
+end
+
+rule "Cionek"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 0)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Thiago Cionkiem!", "img/Cionek.jpg");
+end
+
+rule "Thiago Silva"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 2)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Thiago Silvą!", "img/Thiago Silva.jpg");
+end
+
+rule "Sergio Ramos"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 1)
+		exists Lider(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Sergio Ramosem!", "img/Sergio Ramos.jpg");
+end
+
+rule "Alves"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 1)
+		exists Lider(value == false)
+		exists Banany(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Danim Alvesem!", "img/Alves.jpg");
+end
+
+rule "Luiz"
+	when
+		exists Pozycja(value == 1)
+		exists Agresja(value != 2)
+		exists Taktyka(value == 1)
+		exists Lider(value == false)
+		exists Banany(value == false)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Davidem Luizem!", "img/Luiz.jpg");
+end
+
+//MID
+
+rule "Xavi"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 0)
+		exists Ogrodnik(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Xavim!", "img/Xavi.jpg");
+end
+
+rule "Modric"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 0)
+		exists Ogrodnik(value == false)
+		exists Broda(value == false)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Luką Moriciem!", "img/Modric.jpg");
+end
+
+rule "Xabi"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 0)
+		exists Ogrodnik(value == false)
+		exists Broda(value == true)
+		exists Zaimponowanie(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Xabim Alonso!", "img/Xabi.jpg");
+end
+
+rule "Pirlo"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 0)
+		exists Ogrodnik(value == false)
+		exists Broda(value == true)
+		exists Zaimponowanie(value == false)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Andrea Pirlo!", "img/Pirlo.jpg");
+end
+
+rule "Fabregas"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 1)
+		exists Samolubnosc(value == 0)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Cescem Fabregasem!", "img/Fabregas.jpg");
+end
+
+rule "Isco"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 1)
+		exists Samolubnosc(value == 1)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Isco!", "img/Isco.jpg");
+end
+
+rule "Robben"
+	when
+		exists Pozycja(value == 2)
+		exists Podejscie(value == 1)
+		exists Samolubnosc(value == 2)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Arienem Robbenem!", "img/Robben.jpg");
+end
+
+//ATCK
+
+rule "Giovinco"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value == 0)
+		exists Chipsy(value == false)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Sebastianem Giovinco!", "img/Giovinco.jpg");
+end
+
+rule "Messi"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value == 0)
+		exists Chipsy(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Lionelem Messim!", "img/Messi.jpg");
+end
+
+rule "Balotelli"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Mario Balotellim!", "img/Balotelli.jpg");
+end
+
+rule "Benzema"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+		exists Ego(value == 0)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Karimem Benzemą!", "img/Benzema.jpg");
+end
+ 
+rule "Zlatan"
+ 	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+ 		exists Ego(value == 2)
+ 	then
+        MainWindow.instance().showAnswerPanel("Jesteś Zlatanem Ibrahimowiciem!", "img/Zlatan.jpg");
+end
+
+rule "Lewandowski"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+ 		exists Ego(value == 1)
+ 		exists Nurkowanie(value == false)
+ 	then
+        MainWindow.instance().showAnswerPanel("Jesteś Robertem Lewandowskim!", "img/Lewandowski.jpg");
+end
+
+rule "Neymar"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+ 		exists Ego(value == 1)
+ 		exists Nurkowanie(value == true)
+		exists Zel(value == 1)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Neymarem!", "img/Neymar.jpg");
+end
+
+rule "Ronaldo"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+ 		exists Ego(value == 1)
+ 		exists Nurkowanie(value == true)
+		exists Zel(value == 2)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Cristiano Ronaldo!", "img/Ronaldo.jpg");
+end
+
+rule "Rooney"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+ 		exists Ego(value == 1)
+ 		exists Nurkowanie(value == true)
+		exists Zel(value == 0)
+		exists Gryzienie(value == false)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Waynem Rooney'em!", "img/Rooney.jpg");
+end
+
+rule "Suarez"
+	when
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+		exists Imprezy(value == false)
+ 		exists Ego(value == 1)
+ 		exists Nurkowanie(value == true)
+		exists Zel(value == 0)
+		exists Gryzienie(value == true)
+	then
+        MainWindow.instance().showAnswerPanel("Jesteś Suarezem!", "img/Suarez.jpg");
+end

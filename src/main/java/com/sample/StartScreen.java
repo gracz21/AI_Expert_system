@@ -25,7 +25,7 @@ public class StartScreen extends JPanel
         gbl.setConstraints(label, gbc);
         add(label);
 
-        ImagePanel image = new ImagePanel("/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/start_screen.jpg");
+        ImagePanel image = new ImagePanel("img/start_screen.jpg");
         image.setMinimumSize(new Dimension(465, 465));
         image.setPreferredSize(new Dimension(465, 465));
         gbc.weighty = 1.0;

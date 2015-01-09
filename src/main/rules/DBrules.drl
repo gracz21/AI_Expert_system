@@ -20,6 +20,7 @@ import com.sample.Objects.Zaimponowanie;
 import com.sample.Objects.Samolubnosc;
 import com.sample.Objects.Chipsy;
 import com.sample.Objects.Gryzienie;
+import com.sample.MainWindow;
 
 //Baza wiedzy
 
@@ -30,8 +31,7 @@ rule "Neuer"
 		exists Pozycja(value == 0)
 		exists Wypady(value == true)
 	then
-        MainWindow.instance().showAnswerPanel("Jesteś Manuelem Neuerem!",
-                                              "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Neuer.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Manuelem Neuerem!", "img/Neuer.jpg");
 end
 
 rule "Kuszczak"
@@ -40,8 +40,7 @@ rule "Kuszczak"
 		exists Wypady(value == false)
 		exists Szczescie(value == 0)
 	then
-		System.out.println("Jesteś Tomaszem Kuszczakiem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Tomaszem Kuszczakiem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Kuszczak.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Tomaszem Kuszczakiem!", "img/Kuszczak.jpg");
 end
 
 rule "Szczesny"
@@ -50,8 +49,7 @@ rule "Szczesny"
 		exists Wypady(value == false)
 		exists Szczescie(value == 2)
 	then
-		System.out.println("Jesteś Wojciechem Szczęsnym!");
-        MainWindow.instance().showAnswerPanel("Jesteś Wojciechem Szczęsnym!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Szczesny.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Wojciechem Szczęsnym!", "img/Szczesny.jpg");
 end
 
 rule "Courtois"
@@ -61,8 +59,7 @@ rule "Courtois"
 		exists Szczescie(value == 1)
 		exists Wiek(value == 0)
 	then
-		System.out.println("Jesteś Thibaut Courtois!");
-        MainWindow.instance().showAnswerPanel("Jesteś Thibaut Courtois!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Courtois.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Thibaut Courtois!", "img/Courtois.jpg");
 end
 
 rule "Lloris"
@@ -72,8 +69,7 @@ rule "Lloris"
 		exists Szczescie(value == 1)
 		exists Wiek(value == 1)
 	then
-		System.out.println("Jesteś Hugo Llorisem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Hugo Llorisem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Lloris.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Hugo Llorisem!", "img/Lloris.jpg");
 end
 
 rule "Casillas"
@@ -83,8 +79,7 @@ rule "Casillas"
 		exists Szczescie(value == 1)
 		exists Wiek(value == 2)
 	then
-		System.out.println("Jesteś Ikerem Casillasem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Ikerem Casillasem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Casillas.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Ikerem Casillasem!", "img/Casillas.jpg");
 end
 
 //DEF 
@@ -94,8 +89,7 @@ rule "Mascherano"
 		exists Pozycja(value == 1)
 		exists Wzrost(value <= 1)
 	then
-		System.out.println("Jesteś Javierem Mascherano!");
-        MainWindow.instance().showAnswerPanel("Jesteś Javierem Mascherano!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Mascherano.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Javierem Mascherano!", "img/Mascherano.jpg");
 end
 
 rule "Pepe"
@@ -103,8 +97,7 @@ rule "Pepe"
 		exists Pozycja(value == 1)
 		exists Agresja(value == 2)
 	then
-		System.out.println("Jesteś Pepe!");
-        MainWindow.instance().showAnswerPanel("Jesteś Pepe!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Pepe.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Pepe!", "img/Pepe.jpg");
 end
 
 rule "Cionek"
@@ -113,8 +106,7 @@ rule "Cionek"
 		exists Agresja(value != 2)
 		exists Taktyka(value == 0)
 	then
-		System.out.println("Jesteś Thiago Cionkiem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Thiago Cionkiem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Cionek.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Thiago Cionkiem!", "img/Cionek.jpg");
 end
 
 rule "Thiago Silva"
@@ -123,8 +115,7 @@ rule "Thiago Silva"
 		exists Agresja(value != 2)
 		exists Taktyka(value == 2)
 	then
-		System.out.println("Jesteś Thiago Silvą!");
-        MainWindow.instance().showAnswerPanel("Jesteś Thiago Silvą!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Thiago Silva.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Thiago Silvą!", "img/Thiago Silva.jpg");
 end
 
 rule "Sergio Ramos"
@@ -134,8 +125,7 @@ rule "Sergio Ramos"
 		exists Taktyka(value == 1)
 		exists Lider(value == true)
 	then
-		System.out.println("Jesteś Sergio Ramosem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Sergio Ramosem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Sergio Ramos.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Sergio Ramosem!", "img/Sergio Ramos.jpg");
 end
 
 rule "Alves"
@@ -146,8 +136,7 @@ rule "Alves"
 		exists Lider(value == false)
 		exists Banany(value == true)
 	then
-		System.out.println("Jesteś Danim Alvesem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Danim Alvesem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Alves.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Danim Alvesem!", "img/Alves.jpg");
 end
 
 rule "Luiz"
@@ -158,8 +147,7 @@ rule "Luiz"
 		exists Lider(value == false)
 		exists Banany(value == false)
 	then
-		System.out.println("Jesteś Davidem Luizem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Davidem Luizem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Luiz.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Davidem Luizem!", "img/Luiz.jpg");
 end
 
 //MID
@@ -170,8 +158,7 @@ rule "Xavi"
 		exists Podejscie(value == 0)
 		exists Ogrodnik(value == true)
 	then
-		System.out.println("Jesteś Xavim!");
-        MainWindow.instance().showAnswerPanel("Jesteś Xavim!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Xavi.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Xavim!", "img/Xavi.jpg");
 end
 
 rule "Modric"
@@ -181,8 +168,7 @@ rule "Modric"
 		exists Ogrodnik(value == false)
 		exists Broda(value == false)
 	then
-		System.out.println("Jesteś Luką Moriciem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Luką Moriciem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Modric.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Luką Moriciem!", "img/Modric.jpg");
 end
 
 rule "Xabi"
@@ -193,8 +179,7 @@ rule "Xabi"
 		exists Broda(value == true)
 		exists Zaimponowanie(value == true)
 	then
-		System.out.println("Jesteś Xabim Alonso!");
-        MainWindow.instance().showAnswerPanel("Jesteś Xabim Alonso!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Xabi.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Xabim Alonso!", "img/Xabi.jpg");
 end
 
 rule "Pirlo"
@@ -205,8 +190,7 @@ rule "Pirlo"
 		exists Broda(value == true)
 		exists Zaimponowanie(value == false)
 	then
-		System.out.println("Jesteś Andrea Pirlo!");
-        MainWindow.instance().showAnswerPanel("Jesteś Andrea Pirlo!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Pirlo.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Andrea Pirlo!", "img/Pirlo.jpg");
 end
 
 rule "Fabregas"
@@ -215,8 +199,7 @@ rule "Fabregas"
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 0)
 	then
-		System.out.println("Jesteś Cescem Fabregasem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Cescem Fabregasem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Fabregas.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Cescem Fabregasem!", "img/Fabregas.jpg");
 end
 
 rule "Isco"
@@ -225,8 +208,7 @@ rule "Isco"
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 1)
 	then
-		System.out.println("Jesteś Isco!");
-        MainWindow.instance().showAnswerPanel("Jesteś Isco!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Isco.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Isco!", "img/Isco.jpg");
 end
 
 rule "Robben"
@@ -235,8 +217,7 @@ rule "Robben"
 		exists Podejscie(value == 1)
 		exists Samolubnosc(value == 2)
 	then
-		System.out.println("Jesteś Arienem Robbenem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Arienem Robbenem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Robben.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Arienem Robbenem!", "img/Robben.jpg");
 end
 
 //ATCK
@@ -247,8 +228,7 @@ rule "Giovinco"
 		exists Wzrost(value == 0)
 		exists Chipsy(value == false)
 	then
-		System.out.println("Jesteś Sebastianem Giovinco!");
-        MainWindow.instance().showAnswerPanel("Jesteś Sebastianem Giovinco!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Giovinco.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Sebastianem Giovinco!", "img/Giovinco.jpg");
 end
 
 rule "Messi"
@@ -257,8 +237,7 @@ rule "Messi"
 		exists Wzrost(value == 0)
 		exists Chipsy(value == true)
 	then
-		System.out.println("Jesteś Lionelem Messim!");
-        MainWindow.instance().showAnswerPanel("Jesteś Lionelem Messim!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Messi.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Lionelem Messim!", "img/Messi.jpg");
 end
 
 rule "Balotelli"
@@ -267,8 +246,7 @@ rule "Balotelli"
 		exists Wzrost(value > 0)
 		exists Imprezy(value == true)
 	then
-		System.out.println("Jesteś Mario Balotellim!");
-        MainWindow.instance().showAnswerPanel("Jesteś Mario Balotellim!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Balotelli.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Mario Balotellim!", "img/Balotelli.jpg");
 end
 
 rule "Benzema"
@@ -278,8 +256,7 @@ rule "Benzema"
 		exists Imprezy(value == false)
 		exists Ego(value == 0)
 	then
-		System.out.println("Jesteś Karimem Benzemą!");
-        MainWindow.instance().showAnswerPanel("Jesteś Karimem Benzemą!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Benzema.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Karimem Benzemą!", "img/Benzema.jpg");
 end
  
 rule "Zlatan"
@@ -289,8 +266,7 @@ rule "Zlatan"
 		exists Imprezy(value == false)
  		exists Ego(value == 2)
  	then
- 		System.out.println("Jesteś Zlatanem Ibrahimowiciem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Zlatanem Ibrahimowiciem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Zlatan.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Zlatanem Ibrahimowiciem!", "img/Zlatan.jpg");
 end
 
 rule "Lewandowski"
@@ -301,8 +277,7 @@ rule "Lewandowski"
  		exists Ego(value == 1)
  		exists Nurkowanie(value == false)
  	then
- 		System.out.println("Jesteś Robertem Lewandowskim!");
-        MainWindow.instance().showAnswerPanel("Jesteś Robertem Lewandowskim!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Lewandowski.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Robertem Lewandowskim!", "img/Lewandowski.jpg");
 end
 
 rule "Neymar"
@@ -314,8 +289,7 @@ rule "Neymar"
  		exists Nurkowanie(value == true)
 		exists Zel(value == 1)
 	then
-		System.out.println("Jesteś Neymarem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Neymarem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Neymar.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Neymarem!", "img/Neymar.jpg");
 end
 
 rule "Ronaldo"
@@ -327,8 +301,7 @@ rule "Ronaldo"
  		exists Nurkowanie(value == true)
 		exists Zel(value == 2)
 	then
-		System.out.println("Jesteś Cristiano Ronaldo!");
-        MainWindow.instance().showAnswerPanel("Jesteś Cristiano Ronaldo!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Ronaldo.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Cristiano Ronaldo!", "img/Ronaldo.jpg");
 end
 
 rule "Rooney"
@@ -341,8 +314,7 @@ rule "Rooney"
 		exists Zel(value == 0)
 		exists Gryzienie(value == false)
 	then
-		System.out.println("Jesteś Waynem Rooney'em!");
-        MainWindow.instance().showAnswerPanel("Jesteś Waynem Rooney'em!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Rooney.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Waynem Rooney'em!", "img/Rooney.jpg");
 end
 
 rule "Suarez"
@@ -355,6 +327,5 @@ rule "Suarez"
 		exists Zel(value == 0)
 		exists Gryzienie(value == true)
 	then
-		System.out.println("Jesteś Suarezem!");
-        MainWindow.instance().showAnswerPanel("Jesteś Suarezem!", "/home/jarasz/dev/java/put/si/drools/SI-system-ekspercki-/img/Suarez.jpg");
+        MainWindow.instance().showAnswerPanel("Jesteś Suarezem!", "img/Suarez.jpg");
 end

@@ -1,1 +1,234 @@
-../src/main/rules/Qrules.drl
+package com.sample;
+
+import com.sample.Questions.Question;
+import com.sample.Questions.Init;
+import com.sample.Objects.Pozycja;
+import com.sample.Objects.Ego;
+import com.sample.Objects.Agresja;
+import com.sample.Objects.Zel;
+import com.sample.Objects.Nurkowanie;
+import com.sample.Objects.Wypady;
+import com.sample.Objects.Szczescie;
+import com.sample.Objects.Wzrost; 
+import com.sample.Objects.Wiek;
+import com.sample.Objects.Banany;
+import com.sample.Objects.Taktyka;
+import com.sample.Objects.Imprezy;
+import com.sample.Objects.Lider;
+import com.sample.Objects.Podejscie;
+import com.sample.Objects.Ogrodnik;
+import com.sample.Objects.Broda;
+import com.sample.Objects.Zaimponowanie;
+import com.sample.Objects.Samolubnosc;
+import com.sample.Objects.Chipsy;
+import com.sample.Objects.Gryzienie;
+
+//Pytania 
+
+rule "init"
+	when
+	then
+		insert(new Init());
+end
+
+rule "Pozycja"
+	when
+		x:Init()
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[0].text,
+			x.questions[0].answers);
+		insert(new Pozycja(input));
+end
+
+rule "Wypady"
+	when
+		x:Init()
+		exists Pozycja(value == 0)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[1].text,
+			x.questions[1].answers);
+		insert(new Wypady(input));
+end
+
+rule "Szczescie"
+	when
+		x:Init()
+		exists Wypady(value == false)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[2].text,
+			x.questions[2].answers);
+		insert(new Szczescie(input));
+end
+
+rule "Wiek"
+	when
+		x:Init()
+		exists Szczescie(value == 1)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[3].text,
+			x.questions[3].answers);
+		insert(new Wiek(input));
+end
+
+rule "Wzrost"
+	when
+		x:Init()
+		exists Pozycja(value == 1 || value == 3)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[4].text,
+			x.questions[4].answers);
+		insert(new Wzrost(input));
+end
+
+rule "Agresja"
+	when
+		x:Init()
+ 		exists Pozycja(value == 1)
+ 		exists Wzrost(value == 2)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[5].text,
+			x.questions[5].answers);
+ 		insert(new Agresja(input));
+end
+
+rule "Taktyka"
+	when
+		x:Init()
+		exists Agresja(value != 2)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[6].text,
+			x.questions[6].answers);
+		insert(new Taktyka(input));
+end
+
+rule "Lider"
+	when
+		x:Init()
+		exists Taktyka(value == 1)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[7].text,
+			x.questions[7].answers);
+		insert(new Lider(input));
+end
+
+rule "Banany"
+	when
+		x:Init()
+		exists Lider(value == false)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[8].text,
+			x.questions[8].answers);
+		insert(new Banany(input));
+end
+
+rule "Podejscie"
+	when
+		x:Init()
+		exists Pozycja(value == 2)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[9].text,
+			x.questions[9].answers);
+		insert(new Podejscie(input));
+end
+
+rule "Ogrodnik"
+	when
+		x:Init()
+		exists Podejscie(value == 0)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[10].text,
+			x.questions[10].answers);
+		insert(new Ogrodnik(input));
+end
+
+rule "Broda"
+	when
+		x:Init()
+		exists Ogrodnik(value == false)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[11].text,
+			x.questions[11].answers);
+		insert(new Broda(input));
+end
+
+rule "Zaimponowanie"
+	when
+		x:Init()
+		exists Broda(value == true)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[12].text,
+			x.questions[12].answers);
+		insert(new Zaimponowanie(input));
+end
+
+rule "Samolubnosc"
+	when
+		x:Init()
+		exists Podejscie(value == 1)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[13].text,
+			x.questions[13].answers);
+		insert(new Samolubnosc(input));
+end
+
+rule "Chipsy"
+	when
+		x:Init()
+		exists Pozycja(value == 3)
+		exists Wzrost(value == 0)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[14].text,
+			x.questions[14].answers);
+		insert(new Chipsy(input));
+end
+
+rule "Imprezy"
+	when
+		x:Init()
+		exists Pozycja(value == 3)
+		exists Wzrost(value > 0)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[15].text,
+			x.questions[15].answers);
+		insert(new Imprezy(input));
+end
+
+rule "Ego"
+	when
+		x:Init()
+		exists Imprezy(value == false)
+	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[16].text,
+			x.questions[16].answers);
+		insert(new Ego(input));
+end
+
+rule "Nurkowanie"
+ 	when
+ 		x:Init()
+ 		exists Ego(value == 1)
+ 	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[17].text,
+			x.questions[17].answers);
+ 		insert(new Nurkowanie(input));	
+end
+
+rule "Zel"
+ 	when
+ 		x:Init()
+ 		exists Nurkowanie(value == true)
+ 	then
+		int input = MainWindow.instance().getIntAnswer(x.questions[18].text,
+			x.questions[18].answers);
+ 		insert(new Zel(input));
+end
+
+rule "Gryzienie"
+	when
+		x:Init()
+		exists Zel(value == 0)
+	then
+		boolean input = MainWindow.instance().getBoolAnswer(x.questions[19].text,
+			x.questions[19].answers);
+		insert(new Gryzienie(input));
+end
