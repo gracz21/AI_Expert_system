@@ -1,4 +1,4 @@
-SI-system-ekspercki-
+AI_Expert_system
 ====================
 
-System ekspercki
+Expert system entitled "Which football player is most similar with you?" as project for Artificial Intelligence subject. 
